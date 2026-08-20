@@ -20,13 +20,13 @@
                 <img id="header-logo" src="images/JP.PNG">
                 <span id="header-full-name">Jordan Perez</span>
             </div>
-            <div class="header-center-section">
+            <nav class="header-center-section">
                 <a href="index.html">ABOUT</a>
                 <a href="pages/videos.html">VIDEOS</a>
                 <a href="pages/photos.html">PHOTOS</a>
                 <a href="">SERVICES</a>
                 <a href="">CONTACT</a>
-            </div>
+            </nav>
             <div class="header-right-section">
                 <div class="header-logo-redirects">
                     <a href="https://www.linkedin.com/in/jordan-perez-4b34b33bb/" target="_blank"> 
@@ -57,5 +57,17 @@
                 <span>All Rights Reserved to Jordan Perez. &copy; 2026</span>
             </div>
         </footer>
+        <script>
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+            document.querySelectorAll("nav a").forEach(link => {
+                const linkPage = link.getAttribute("href").split("/").pop();
+
+                if (linkPage === currentPage) {
+                    link.classList.add("active");
+                    link.setAttribute("aria-current", "page");
+                }
+            });
+        </script>
     </body>
 </html>

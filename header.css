@@ -122,3 +122,12 @@
 #header-reach-out-button:hover {
     transform: scale(95%); 
 }
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a.active {
+    color: #838282;
+}
