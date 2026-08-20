@@ -2,7 +2,33 @@
 .header-box {
     height: 105px;
 
-    background-color: rgb(228, 228, 228);
+    background: 
+        radial-gradient(
+            circle at 8% 18%,
+            rgba(212, 211, 211, 0.65) 0 45px,
+            transparent 1000px
+        ),
+        radial-gradient(
+            circle at 92% 25%,
+            rgba(215, 215, 215, 0.13) 0 80px,
+            transparent 1000px
+        ),
+        radial-gradient(
+            circle at 12% 82%,
+            rgba(187, 186, 186, 0.1) 0 65px,
+            transparent 1000px
+        ),
+        radial-gradient(
+            circle at 38% 38%,
+            rgba(214, 211, 211, 0.12) 0 100px,
+            transparent 1000px
+        ),
+        linear-gradient(
+            135deg,
+            rgb(255, 255, 255),
+            rgb(221, 216, 216)
+        );
+    
 
     display: flex;
     align-items: center;
@@ -13,6 +39,8 @@
     font-weight: 700;
 
     color: rgb(0, 0, 0);
+
+    z-index: 200;
 
 }
 
