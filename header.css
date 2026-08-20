@@ -1,0 +1,96 @@
+
+.header-box {
+    height: 105px;
+
+    background-color: rgb(228, 228, 228);
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    font-size: 36px;
+    font-weight: 700;
+
+    color: rgb(0, 0, 0);
+
+}
+
+.header-left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#header-logo {
+    width: 60px;
+    height: 60px;
+
+}
+
+.header-logo-redirects a img {
+    width: 40px;
+    height: 40px;
+
+    display: block;
+
+}
+
+.header-right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.header-logo-redirects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+.header-center-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+}
+
+.header-center-section a {
+    font-size: 20px;
+}
+
+.header-box a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.header-box a:hover {
+    transform: scale(95%);
+}
+
+#header-reach-out-button {
+    border-radius: 10px;
+    border: 1px black solid;
+    padding: 15px 20px;
+
+    background-color: black;
+
+    color: white;
+
+
+    font-weight: 700;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+#header-reach-out-button:hover {
+    transform: scale(95%); 
+}

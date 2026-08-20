@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-color: rgb(24, 24, 24);
+    font-family: Roboto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    flex: 1;
+}
+
+footer {
+
+}
