@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="header.css">
         <link rel="stylesheet" href="footer.css">
         <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="about-partnerships.css">
 
         <link rel="icon" type="image/png" href="images/JP.PNG">
 
@@ -16,16 +17,16 @@
     </head>
     <body>
         <header class="header-box">
-            <div class="header-left-section">
+            <a href="index.html" class="header-left-section">
                 <img id="header-logo" src="images/JP.PNG">
                 <span id="header-full-name">Jordan Perez</span>
-            </div>
+            </a>
             <nav class="header-center-section">
                 <a href="/">ABOUT</a>
-                <a href="pages/videos.html">VIDEOS</a>
-                <a href="pages/photos.html">PHOTOS</a>
-                <a href="">SERVICES</a>
-                <a href="">CONTACT</a>
+                <a href="pages/videos.html">VIDEO</a>
+                <a href="pages/photos.html">PHOTO</a>
+                <a href="pages/services.html">SERVICES</a>
+                <a href="pages/contact.html">CONTACT</a>
             </nav>
             <div class="header-right-section">
                 <div class="header-logo-redirects">
@@ -33,37 +34,64 @@
                         <img src="images/linkedin.png">
                     </a>
                     <a href="https://www.instagram.com/jpshot.it/" target="_blank">
-                        <img src="images/instagram-removebg-preview.png">
+                        <img id="header-instagram-logo" src="images/instagram-removebg-preview.png">
                     </a>
-                    <button id="header-reach-out-button">
+                    <button id="header-reach-out-button" onclick="window.location.href='pages/contact.html'">
                         REACH OUT
                     </button>
                 </div>
-            </div>
+            </div> 
         </header>
         <main>
-            <section>
+            <section class="about-section">
+                
                 <div id="about-section-textbox">
-                    
+                    <span id="about-section-gradient">
+                        <div class="about-section-text">
+                            <h1>About</h1>
+                            <p>I’m a multidisciplinary designer focused on creating thoughtful visual identities, digital experiences, and meaningful brand systems. My work combines strategy, experimentation, and attention to detail to transform ideas into clear and memorable experiences.</p>
+                            <p>Currently based in Canada, I collaborate with individuals and organizations across culture, technology, and the creative industries.</p>
+                            <p id="about-section-text-last-blurb">Incoming Sports Media Student at Toronto Metropolitan University</p>
+
+                            <div id="about-section-button-redirects">
+                                <button>VIEW PHOTOS</button>
+                                <button>VIEW VIDEOS</button>
+                            </div>
+                        </div>
+                    </span>
                 </div>
                 <img id="about-photo" src="images/about.jpg">
             </section>
-            <section>
+            <section class="partnership-section">
+                <h1>WIP</h1>
 
             </section>
         </main>
         <footer class="footer-box">
             <div class="footer-center-section">
                 <span>All Rights Reserved to Jordan Perez. &copy; 2026</span>
+                <div id="footer-logos">
+                    <a href="https://www.linkedin.com/in/jordan-perez-4b34b33bb/" target="_blank"> 
+                        <img src="images/linkedin.png">
+                    </a>
+                    <a href="https://www.instagram.com/jpshot.it/" target="_blank">
+                        <img src="images/instagram-removebg-preview.png">
+                    </a>
+                </div>
             </div>
         </footer>
         <script>
-            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+            const currentPath =
+                window.location.pathname === "/"
+                    ? "/"
+                    : window.location.pathname.replace(/\/index\.html$/, "/");
 
             document.querySelectorAll("nav a").forEach(link => {
-                const linkPage = link.getAttribute("href").split("/").pop();
+                const linkPath = new URL(link.href, window.location.origin).pathname;
+                const normalizedLinkPath =
+                    linkPath === "/" ? "/" : linkPath.replace(/\/index\.html$/, "/");
 
-                if (linkPage === currentPage) {
+                if (normalizedLinkPath === currentPath) {
                     link.classList.add("active");
                     link.setAttribute("aria-current", "page");
                 }

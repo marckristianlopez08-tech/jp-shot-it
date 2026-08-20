@@ -1,12 +1,35 @@
+.about-section { 
+    position: relative;
+    overflow: hidden;
+    height: 65vh;
+
+}
+
+
 #about-photo {
     position: absolute;
     top: 0;
     right: -330px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
 }
-#about-section-textbox {
+.about-section-text {
+
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 100px;
+    margin-top: 50px;
+    
+    width: 600px;
+}
+
+#about-section-gradient {
+    display: flex;
+    flex-direction: column;
+
     position: relative;
     z-index: 2;
 
@@ -16,7 +39,63 @@
     background: linear-gradient(
         90deg,
         rgb(15, 15, 15) 0%,
-        rgb(15, 15, 15) 30%,
+        rgb(15, 15, 15) 20%,
+        rgb(15, 15, 15) 40%,
         rgba(15, 15, 15, 0) 100%
     );
+}
+
+.about-section h1, p{
+    color: white;
+    display: inline;
+}
+
+.about-section h1 {
+    font-size: 80px;
+}
+
+.about-section p {
+    font-size: 24px;
+}
+
+#about-section-text-last-blurb {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+#about-section-button-redirects {
+    display: flex;
+    gap: 10px;
+}
+
+.about-section-text button {
+
+    margin-top: 30px;
+    width: 200px;
+    height: 80px;
+    
+    cursor: pointer;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+
+    background-color: rgb(23, 23, 23);
+
+    border: 1px solid white;
+    border-radius: 6px;
+
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.about-section-text button:hover {
+    transform: scale(95%);
+}
+
+.about-section-text button:active {
+    background-color: rgb(221, 221, 221);
+    border-color: rgb(23, 23, 23);
+    color: rgb(12, 12, 12);
+    transform: scale(95%);
 }

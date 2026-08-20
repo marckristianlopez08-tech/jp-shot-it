@@ -1,16 +1,14 @@
 
 .footer-box {
-    height: 105px;
+    height: 90px;
     width: 100%;
 
-    position: fixed;
-    bottom: 0;
-
+   
     background-color: rgb(228, 228, 228);
 
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     
     font-size: 20px;
@@ -20,9 +18,18 @@
     z-index: 200;
 }
 
-.footer-center-section {
+
+
+#footer-logos {
     display: flex;
+    margin-top: 6px;
+
+    gap: 10px;
     justify-content: center;
-    align-items: center;
-    gap: 30px;
+
+}
+
+.footer-box img {
+    width: 20px;
+    height: 20px;
 }
